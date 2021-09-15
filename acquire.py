@@ -34,7 +34,7 @@ def new_zillow_data():
     SELECT parcelid, bedroomcnt AS bathrooms, bathroomcnt as bedrooms, calculatedfinishedsquarefeet AS sqft_calc, 
            taxvaluedollarcnt AS appraised_value, assessmentyear AS assessment_year, 
            taxamount AS tax_amount, fips AS county, yearbuilt AS year_built, regionidcounty AS region_id_county,
-           regionidzip AS region_id_zip, transactiondate AS transaction_date
+           regionidzip AS region_id_zip
     FROM properties_2017
         JOIN predictions_2017 USING(parcelid)
             JOIN propertylandusetype USING (propertylandusetypeid)
